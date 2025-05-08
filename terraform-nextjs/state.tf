@@ -1,9 +1,11 @@
 
 terraform {
   backend "s3" {
-    bucket = "fludd-terraform-state"
+    bucket = "my-web-terraform-state"
     key    = "global/s3/terraform.tfstate"
-    dynamodb_table = "terraform-web-site"
     region = "us-east-1"
+    dynamodb_table = "terraform-lock-file"
   }
 }
+
+
